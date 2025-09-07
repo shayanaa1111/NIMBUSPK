@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimbus - Premium Vaping Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Age Verification Screen: This is the first screen users will see. -->
+    <div id="age-verification" class="age-verification active">
+        <div class="age-verification-content">
+            <div class="age-logo">
+                <h1>Nimbus</h1>
+            </div>
+            <div class="age-text">
+                <h2>AGE VERIFICATION</h2>
+                <p>To use the Nimbus website you must be at least 18 years old or above.</p>
+                <p>Please verify your age before entering the site.</p>
+            </div>
+            <div class="age-buttons">
+                <button class="age-btn under-age" id="underAge">Under 18</button>
+                <button class="age-btn over-age" id="overAge">I am 18+</button>
+            </div>
+            <div class="age-warning">
+                <p><strong>WARNING:</strong> This product contains nicotine. Nicotine is an addictive chemical.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Uneligible Screen: Shown if age verification fails. -->
+    <div id="uneligible-screen" class="uneligible-screen">
+        <div class="uneligible-content">
+            <div class="uneligible-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>ACCESS DENIED</h2>
+            <p>You must be 18 years or older to access this website.</p>
+            <p>Thank you for your understanding.</p>
+            <button class="back-btn" onclick="location.reload()">Go Back</button>
+        </div>
+    </div>
+
+    <!-- Splash Screen: Appears after successful age verification. -->
+    <div id="splash-screen" class="splash-screen">
+        <!-- Splash Header: Logo on left for PC, centered for mobile. Skip intro button. -->
+        <header class="splash-header">
+            <div class="splash-header-content">
+                <div class="splash-logo-header">
+                    <h2>Nimbus</h2>
+                    
+                </div>
+                <div class="splash-skip-desktop">
+                    <button id="skipSplash" class="skip-btn">
+                        <span>Skip Intro</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Splash Slider Container: Auto-rotating slides with smooth transitions. -->
+        <div class="splash-slider-container">
+            <div class="splash-slide active" data-slide="0">
+                <div class="splash-slide-bg splash-bg-1"></div>
+                <div class="splash-slide-content">
+                    <div class="splash-image-box">
+                        <img src="FIRST (2).png" alt="Vaping Innovation">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="splash-slide" data-slide="1">
+                <div class="splash-slide-bg splash-bg-2"></div>
+                <div class="splash-slide-content">
+                    <div class="splash-image-box">
+                        <img src="SECOND (2).png" alt="Exceptional Quality">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="splash-slide" data-slide="2">
+                <div class="splash-slide-bg splash-bg-3"></div>
+                <div class="splash-slide-content">
+                    <div class="splash-image-box">
+                        <img src="FOURTH (2).png" alt="Advanced Technology">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <!-- Splash Controls: Interactive indicators. -->
+        <div class="splash-controls">
+            <div class="splash-indicators">
+                <button class="splash-indicator active" data-slide="0"></button>
+                <button class="splash-indicator" data-slide="1"></button>
+                <button class="splash-indicator" data-slide="2"></button>
+            </div>
+        </div>
+
+        <!-- Mobile Skip Button: Hidden on desktop. -->
+        <div class="splash-skip-mobile">
+            <button id="skipSplashMobile" class="skip-btn-mobile">
+                Skip <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Splash Footer: Simplified footer. -->
+        
+    </div>
+
+    <!-- Main Website: This content becomes visible after the splash screen. -->
+    <div id="main-website" class="main-website">
+        <!-- Navigation for Main Website: Logo left for PC, centered for mobile. -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Nimbus</a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="products.html" class="nav-link">PRODUCTS</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Slider (Main Website) -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <p class="slide-subtitle animate-text">Discover Innovation</p>
+                            <h1 class="slide-title animate-text">PREMIUM VAPING EXPERIENCE</h1>
+                            <p class="slide-description animate-text">Experience the future of vaping with our cutting-edge technology and premium design.</p>
+                            <button class="cta-button animate-text">EXPLORE NOW</button>
+                        </div>
+                    </div>
+                    <div class="slide-bg"></div>
+                </div>
+                
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <p class="slide-subtitle animate-text">Next Generation</p>
+                            <h1 class="slide-title animate-text">ADVANCED TECHNOLOGY</h1>
+                            <p class="slide-description animate-text">Revolutionary features that redefine your vaping experience with precision and style.</p>
+                            <button class="cta-button animate-text">LEARN MORE</button>
+                        </div>
+                    </div>
+                    <div class="slide-bg"></div>
+                </div>
+                
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <p class="slide-subtitle animate-text">Crafted to Perfection</p>
+                            <h1 class="slide-title animate-text">EXCEPTIONAL QUALITY</h1>
+                            <p class="slide-description animate-text">Every detail matters. Premium materials and meticulous craftsmanship in every product.</p>
+                            <button class="cta-button animate-text">SHOP NOW</button>
+                        </div>
+                    </div>
+                    <div class="slide-bg"></div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            
+            
+            <!-- Slider Indicators -->
+            <div class="slider-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+        </section>
+
+        <!-- New Product Showcase Slider -->
+        <section class="product-showcase-section">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>OUR LATEST ARRIVALS</h2>
+                    <p>Explore the newest additions to our premium collection</p>
+                </div>
+                <div class="product-showcase-slider">
+                    <div class="slider-container" id="productShowcaseSliderContainer">
+                        <div class="slide active" data-slide="0">
+                            <img src="Untitled design (9).png" alt="New Product 1">
+                        </div>
+                        <div class="slide" data-slide="1">
+                            <img src="Untitled design (10).png" alt="New Product 2" >
+                        </div>
+                        <div class="slide" data-slide="2">
+                            <img src="Untitled design (11).png" alt="New Product 3">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev-btn" id="productShowcasePrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" id="productShowcaseNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-indicators" id="productShowcaseIndicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products" id="featured-products">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>FEATURED PRODUCTS</h2>
+                    <p>Discover our latest innovations in vaping technology</p>
+                </div>
+                
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded from JSON -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section scroll-animate">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>ABOUT Nimbus</h2>
+                        <p>Nimbus is dedicated to creating premium vaping experiences through innovative technology and exceptional design. Our commitment to quality and performance drives everything we do.</p>
+                        <p>From cutting-edge pod systems to professional-grade mods, we craft products that deliver unparalleled satisfaction and reliability for vaping enthusiasts worldwide.</p>
+                        <button class="cta-button">LEARN MORE</button>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number counter" data-target="5">0</div>
+                            <p class="stat-label">Years of Innovation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer for Main Website: Netflix-style footer. -->
+       <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Nimbus</h3>
+                        <p>Where Passion Meets the Clouds.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61575808547803" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/nimbuspk.official/" class="social-link"><i class="fab fa-instagram"></i></a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i>nimbus.official@gmail.com</p>
+                            <p><i class="fas fa-phone"></i>0086-132-69923421</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Nimbus. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
